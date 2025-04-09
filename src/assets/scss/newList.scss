@@ -1,0 +1,390 @@
+//========================
+// 新聞列表頁面主樣式
+//========================
+.project {
+  position: relative;
+
+  .toplogo {
+    width: 70px;
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    z-index: 5;
+
+    @media screen and (max-width: 1600px) {
+      width: 60px;
+    }
+
+    @media screen and (max-width: 980px) {
+      width: 42px;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  section.news_list {
+    padding-top: 200px;
+    background-color: #f0f0f0;
+
+    @media screen and (max-width: 1600px) {
+      padding-top: 160px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      padding-top: 13vw;
+    }
+
+    @media screen and (max-width: 980px) {
+      padding-top: 17.5vw;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1412px;
+      margin: 0 auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .lock {
+      margin-left: auto;
+      margin-right: 0;
+      max-width: 1740px;
+    }
+
+    //========================
+    // 標題區塊樣式
+    //========================
+    .title {
+      h2 {
+        display: flex;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '●';
+          font-size: 18px;
+          top: 0;
+          left: -30px;
+          color: #333;
+          transition: 0.25s linear;
+          background: linear-gradient(to right bottom, #ff7212 0% 60%, #ffdd80 70% 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        span {
+          font-size: 100px;
+          font-weight: 900;
+          text-align: left;
+          color: #333;
+          line-height: 1;
+
+          @media screen and (max-width: 980px) {
+            font-size: 60px;
+          }
+        }
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: 3.08px;
+        text-align: left;
+        color: #333;
+        font-family: 'Noto Sans TC';
+      }
+    }
+
+    //========================
+    // 麵包屑導航樣式
+    //========================
+    .breadcrumb {
+      transform: translateY(-12px);
+      padding: 0 15vw 0 8vw;
+
+      @media screen and (max-width: 1280px) {
+        padding: 0 8.5vw 0 7.2vw;
+      }
+
+      @media screen and (max-width: 980px) {
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 32px;
+        padding: 0 0 0 7.25vw;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        width: 95%;
+        padding-right: 0;
+        max-width: 1440px;
+
+        @media screen and (max-width: 1920px) {
+          padding-right: 16px;
+        }
+
+        @media screen and (max-width: 980px) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+
+      .pic {
+        max-width: 15px;
+      }
+
+      a {
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: #333333;
+          font-family: 'Noto Sans TC';
+          letter-spacing: 1.96px;
+          line-height: normal;
+        }
+
+        i {
+          margin: 0 4px;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: #333333;
+          font-family: 'Noto Sans TC';
+          letter-spacing: 1.96px;
+        }
+      }
+
+      .grey {
+        span {
+          color: #8e8e8e;
+        }
+      }
+    }
+
+    //========================
+    // 內容區塊樣式
+    //========================
+    .content {
+      width: 90%;
+      max-width: 1740px;
+      margin-left: auto;
+      background-color: #fff;
+      padding: 70px 15vw 88px 6vw;
+
+      @media screen and (max-width: 1280px) {
+        padding: 4.25vw 8.5vw 2.5vw 7.2vw;
+      }
+
+      @media screen and (max-width: 980px) {
+        margin: 0 auto;
+        padding: 3.25vw 0 5.25vw 0;
+      }
+
+      .container {
+        width: 95%;
+
+        @media screen and (max-width: 980px) {
+          width: 100%;
+        }
+      }
+
+      //========================
+      // 新聞項目樣式
+      //========================
+      .list {
+        a {
+          padding: 25px 0;
+          display: flex;
+          border-bottom: 1px solid #bdbdbd;
+          transition: 0.25s linear;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: '';
+            background-image: url(@/assets/images/arrow.svg);
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 15px;
+            background-size: cover;
+            right: 0;
+            bottom: 25px;
+            transition: 0.25s linear;
+          }
+
+          @media screen and (min-width: 981px) {
+            &:hover {
+              border-bottom: 1px solid #000;
+              .pic {
+                .bg {
+                  transform: scale(1.1);
+                }
+              }
+              &::after {
+                background-image: url(@/assets/images/arrow_h.svg);
+              }
+            }
+          }
+
+          @media screen and (max-width: 980px) {
+            padding: 25px 0;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+
+            &::after {
+              bottom: 15px;
+            }
+          }
+        }
+
+        .pic {
+          max-width: 230px;
+          width: 100%;
+          height: 175px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-right: 30px;
+          overflow: hidden;
+
+          @media screen and (max-width: 980px) {
+            max-width: 100%;
+            height: 52vw;
+          }
+
+          .bg {
+            transition: 0.2s linear;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .date {
+          width: 15%;
+          line-height: 1.5;
+          font-size: 16px;
+          line-height: 2.13;
+          color: #333;
+
+          @media screen and (max-width: 980px) {
+            margin-top: 16px;
+            width: 100%;
+          }
+        }
+
+        p {
+          width: 60%;
+          max-width: 1240px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 1.5;
+          letter-spacing: 1.8px;
+          text-align: justify;
+          color: #333;
+          font-family: 'Noto Sans TC';
+
+          @media screen and (max-width: 980px) {
+            width: 100%;
+            margin-top: 16px;
+          }
+        }
+
+        &:last-child {
+          a {
+            border-bottom: unset;
+          }
+        }
+      }
+
+      //========================
+      // 載入狀態樣式
+      //========================
+      .loading {
+        text-align: center;
+        padding: 50px 0;
+
+        p {
+          font-size: 18px;
+          color: #333;
+        }
+      }
+
+      //========================
+      // 分頁導航樣式
+      //========================
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-top: 6.2vw;
+
+        a {
+          font-size: 18px;
+          font-weight: 900;
+          line-height: 1.89;
+          text-align: center;
+          color: #333;
+          transition: 0.25s linear;
+
+          @media screen and (min-width: 981px) {
+            &:hover:not(.disabled) {
+              color: #ff7212;
+            }
+          }
+
+          &.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+
+        .current {
+          color: #ff7212;
+        }
+
+        .prev {
+          width: 24px;
+          height: 15px;
+          background-image: url(@/assets/images/arrow.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: 0.25s linear;
+          transform: rotate(180deg);
+
+          @media screen and (min-width: 981px) {
+            &:hover:not(.disabled) {
+              background-image: url(@/assets/images/arrow_h.svg);
+            }
+          }
+        }
+
+        .next {
+          width: 24px;
+          height: 15px;
+          background-image: url(@/assets/images/arrow.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: 0.25s linear;
+
+          @media screen and (min-width: 981px) {
+            &:hover:not(.disabled) {
+              background-image: url(@/assets/images/arrow_h.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

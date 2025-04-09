@@ -1,0 +1,30 @@
+{
+  "name": "jwi-mock",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "mock": "json-server --watch mock/db.json --port 3001"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.0.0",
+    "aos": "^2.3.4",
+    "axios": "^1.8.4",
+    "swiper": "^11.2.6",
+    "vue": "^3.5.13",
+    "vue-i18n": "^9.14.3",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.1.2",
+    "json-server": "^1.0.0-beta.3",
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "vite": "^6.2.0"
+  }
+}
