@@ -20,7 +20,7 @@ onMounted(async () => {
       title: item.title,
       link: `/news/${item.id}`,
     }))
-    console.log(newsItems.value)
+    // console.log(newsItems.value)
   } catch (error) {
     console.error('Error fetching news:', error)
   } finally {
