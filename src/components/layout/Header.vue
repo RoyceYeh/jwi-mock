@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
+import menuIcon from '@/assets/images/menu.svg'
 
 const router = useRouter()
 const isMenuOpen = ref(false)
@@ -96,7 +97,7 @@ onUnmounted(() => {
     <nav>
       <div class="language">
         <router-link class="logo" to="/">
-          <div class="pic"><img src="../assets/images/menu.svg" alt="" /></div>
+          <div class="pic"><img :src="menuIcon" alt="" /></div>
         </router-link>
         <a class="lang" href="javascript:;">繁體中文</a>
         <a class="lang" href="javascript:;">日本語</a>

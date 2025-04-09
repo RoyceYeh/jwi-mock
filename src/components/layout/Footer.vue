@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import footerIcon from '@/assets/images/footer.svg'
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -14,7 +14,7 @@ const scrollToTop = () => {
     <div class="container">
       <div class="content">
         <a class="logo" href="javascript:;">
-          <div class="pic"><img src="../assets/images/footer.svg" alt="" /></div>
+          <div class="pic"><img :src="footerIcon" alt="" /></div>
         </a>
         <ul class="row">
           <li>
