@@ -146,7 +146,6 @@ onUnmounted(() => {
 <template>
   <section class="service" id="service">
     <div class="container">
-      <div class="grayslogan">JWI Marketing</div>
       <div class="content">
         <div class="title">
           <h2>

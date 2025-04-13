@@ -10,8 +10,6 @@ const route = useRoute()
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 const isOverflowHidden = ref(false)
-const showRecruitTop = ref(true)
-const showRecruitBottom = ref(false)
 
 // 判斷是否為首頁
 const isHomePage = computed(() => route.path === '/' || route.path === '')
@@ -51,12 +49,6 @@ const closeMenu = () => {
   }
 }
 
-// 隱藏招募區塊
-const hideRecruit = () => {
-  showRecruitTop.value = false
-  showRecruitBottom.value = false
-}
-
 // 設置 header 位置和狀態
 const updateHeaderState = () => {
   const scrollTop = window.scrollY
@@ -69,15 +61,6 @@ const updateHeaderState = () => {
   } else {
     // 在非首頁上，總是應用 scroll 樣式（固定在頂部）
     isScrolled.value = true
-  }
-
-  // 更新招募區塊顯示狀態
-  if (isScrolled.value) {
-    showRecruitTop.value = false
-    showRecruitBottom.value = true
-  } else {
-    showRecruitTop.value = true
-    showRecruitBottom.value = false
   }
 }
 
@@ -167,10 +150,6 @@ const scrollToElement = (hash) => {
 
 <template>
   <header :class="{ open: isMenuOpen, scroll: isScrolled, scrollOpen: isMenuOpen && isScrolled }">
-    <div v-if="showRecruitTop" class="recruit recruittop">
-      <a class="pic" href="https://www.104.com.tw/company/b8j2fc8" target="_blank"></a>
-      <a class="x" href="javascript:;" @click="hideRecruit"></a>
-    </div>
     <nav>
       <div class="language">
         <router-link class="logo" to="/" @click="closeMenu">

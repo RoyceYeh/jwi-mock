@@ -231,5 +231,6 @@ onMounted(() => {
         <p>All projects</p>
       </a>
     </div>
+    <div class="grayslogan">JWI Marketing</div>
   </section>
 </template>

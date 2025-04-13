@@ -93,47 +93,7 @@
     @media screen and (max-width: 1600px) {
       top: calc(100vh - 417px);
     }
-    .recruit {
-      top: -94px;
-      left: 0;
-      position: absolute;
-      display: block;
-      width: 100%;
-      max-width: 195px;
-      height: 93px;
-      .pic {
-        display: block;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: 0.15s linear;
-        height: 100%;
-        background-image: url('@/assets/images/recruit.svg');
-        @media screen and (min-width: 981px) {
-          &:hover {
-            background-image: url('@/assets/images/recruit_hover.svg');
-          }
-        }
-      }
-      .x {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url('@/assets/images/x.svg');
-        display: block;
-        right: 3px;
-        top: 10px;
-      }
-    }
-    .recruitbottom {
-      top: unset;
-      bottom: -94px;
-      display: none;
-      &.active {
-        display: block;
-      }
-    }
+
     nav {
       background-color: #fff;
       .language {
@@ -847,6 +807,7 @@
         margin-top: 0;
         p {
           text-align: center;
+          line-height: 1.5;
         }
       }
       .gotop {
@@ -856,15 +817,20 @@
         right: 20px;
         z-index: 99;
         display: none;
-        width: 40px;
-        height: 40px;
-        transition: 0.25s linear;
-        background-image: url('@/assets/images/M_TOP.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
+        .pic {
+          width: 40px;
+          height: 40px;
+          transition: 0.25s linear;
+          background-image: url('@/assets/images/top_m.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
       }
       .gotop.show {
         display: block;
+        .pic {
+          display: block;
+        }
       }
     }
 
