@@ -44,10 +44,7 @@ const scrollToTop = () => {
         </ul>
       </div>
     </div>
-    <div class="more lang">
-      <a href="javascript:;">繁體中文</a>
-      <a href="javascript:;">日本語</a>
-    </div>
+    <div class="more lang"></div>
     <div class="copyright">
       <div class="container">
         <p>Copyright &copy; {{ new Date().getFullYear() }} 傑森全球整合行銷股份有限公司</p>

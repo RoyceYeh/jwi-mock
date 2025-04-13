@@ -3,6 +3,8 @@ import { ref, computed, onMounted } from 'vue'
 import api from '../services/api'
 import WorkListContent from '../components/work/WorkListContent.vue'
 import WorkPagination from '../components/work/WorkPagination.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const works = ref([])
 const currentPage = ref(1)
@@ -42,6 +44,11 @@ const handlePageChange = (page) => {
 }
 
 onMounted(() => {
+  // 初始化 AOS 動畫
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+  })
   fetchWorks()
 })
 </script>

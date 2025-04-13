@@ -1,12 +1,11 @@
 @use './reset.scss';
-@use './layout.scss';
 @use './index.scss';
 @use './about.scss';
 @use './newList.scss';
 @use './newsDetail.scss';
 @use './workList.scss';
 @use './workDetail.scss';
-
+@use './layout.scss';
 html,
 body {
   font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
