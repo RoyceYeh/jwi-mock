@@ -47,7 +47,7 @@ const scrollToTop = () => {
     <div class="more lang"></div>
     <div class="copyright">
       <div class="container">
-        <p>Copyright &copy; {{ new Date().getFullYear() }} 傑森全球整合行銷股份有限公司</p>
+        <p>Copyright &copy; {{ new Date().getFullYear() }} 本網站僅供個人作品使用，不提供商業用途</p>
       </div>
     </div>
     <div class="gotop">
